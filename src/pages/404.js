@@ -1,8 +1,8 @@
 /** @jsx jsx */
 // noinspection ES6UnusedImports
-import { Container, Heading, jsx, Text } from "theme-ui";
+import {Container, Heading, jsx, Text} from "theme-ui";
 import Layout from "../components/Layout";
-import { Link } from "gatsby";
+import {Link} from "gatsby";
 
 const NotFoundPage = () => {
   return (
