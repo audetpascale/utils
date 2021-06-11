@@ -1,6 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: "utils",
+    title: "",
+    author: "Pascale Audet",
+    description: "",
+    image: "/icons/icon-512x512.png",
+    language: "en-ca",
+    siteUrl: "https://audetpascale.com",
+    twitterUsername: "audetpascalea",
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
