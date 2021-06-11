@@ -9,11 +9,7 @@ module.exports = {
     twitterUsername: "audetpascalea",
   },
   plugins: [
-    "gatsby-plugin-netlify-cms",
-    "gatsby-plugin-theme-ui",
     "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -21,8 +17,12 @@ module.exports = {
       },
     },
     "gatsby-plugin-mdx",
+    "gatsby-plugin-netlify-cms",
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-theme-ui",
+    "gatsby-plugin-well-known",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -39,5 +39,6 @@ module.exports = {
       },
       __key: "pages",
     },
+    "gatsby-transformer-sharp",
   ],
 };
