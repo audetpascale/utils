@@ -1,4 +1,4 @@
-import { Input, Label } from "theme-ui";
+import { Box, Flex, Input, Label } from "theme-ui";
 import { useDispatch } from "react-redux";
 import React from "react";
 import {
@@ -9,30 +9,32 @@ import {
 const Temperature = ({ convertState }) => {
   const dispatch = useDispatch();
   const changeCelsius = ({ target: { value } }) => {
-    dispatch(convertFahrenheitToCelsius(Number(value)));
+    dispatch(convertFahrenheitToCelsius(value));
   };
 
   const changeFahrenheit = ({ target: { value } }) => {
-    dispatch(convertCelsiusToFahrenheit(Number(value)));
+    dispatch(convertCelsiusToFahrenheit(value));
   };
 
   return (
-    <div>
-      <Label htmlFor="celsius">Celsius</Label>
-      <Input
-        name="celsius"
-        onChange={changeFahrenheit}
-        type="number"
-        value={convertState.celsius}
-      />
-      <Label htmlFor="fahrenheit">Fahrenheit</Label>
-      <Input
-        name="fahrenheit"
-        onChange={changeCelsius}
-        type="number"
-        value={convertState.fahrenheit}
-      />
-    </div>
+    <Flex>
+      <Box p={2}>
+        <Label htmlFor="celsius">Celsius</Label>
+        <Input
+          name="celsius"
+          onChange={changeFahrenheit}
+          value={convertState.celsius}
+        />{" "}
+      </Box>
+      <Box p={2}>
+        <Label htmlFor="fahrenheit">Fahrenheit</Label>
+        <Input
+          name="fahrenheit"
+          onChange={changeCelsius}
+          value={convertState.fahrenheit}
+        />
+      </Box>
+    </Flex>
   );
 };
 
